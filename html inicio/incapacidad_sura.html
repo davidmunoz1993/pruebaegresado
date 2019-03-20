@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>|
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/sura.css">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="icon" href="sura/halas sura.jpg">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+    <title>EPS SURA</title>
+</head>
+<body>
+    <div class="centrar">
+        <img src="sura/logo eps sura.png" class="medidalogo">
+            <br>
+            <small class="from-text text-muted">EPS y Medicina Prepagada Suramericana S.A.</small>
+    </div>
+    <div class="centrar"><b>CERTIFICADO DE INCAPACIDAD / LICENCIA Nro. 0 - 22171375</b></div>
+    <br>
+    <div class="centrardiv" >
+        <form>
+            <table>
+                <td><b>INFORMACION DEL PACIENTE</b></td>
+                <tr>
+                    <td>FECHA:</td>
+                    <td>
+                        <input type="date" name="nombre" size="28" class="diseñotexto">
+                            IPS ATIENDE:
+                            <input type="text" name="ips" size="88" class="diseñotexto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>AFILIADO:</td>
+                    <td>
+                        <select name="opcion" class="diseñotexto">
+                            <option>tipo de documento
+                            <option>cedula de ciudadania
+                            <option>targeta de indentidad
+                            </select>
+                        IPS ATIENDE:
+                        <input type="text" name="ips" size="82" class="diseñotexto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>DIAGNOSTICO:</td>
+                    <td>
+                        <input type="text" name="diagnostico" size="112" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>ORIGEN:</td>
+                    <td>
+                        <input type="text" name="origen" size="54" class="diseñotexto">
+                            CLASIFICACION:
+                            <input type="text" name="clasificacion" size="42" class="diseñotexto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>FECHA DE INICIO:</td>
+                    <td>
+                        <input type="date" name="fecha de inicio" size="20"  class="diseñotexto">
+                            DURACION:
+                            <input type="text" name="duracion" size="51" class="diseñotexto">
+                                FECHA DE FINALIZACION:
+                                <input type="date" name="fecha fin" size="19"  class="diseñotexto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>TIPO DE GENERACION:</td>
+                    <td>
+                        <input type="text" name="Nro.Prescripcion" size="20"  class="diseñotexto">
+                            Nro.PRESCRIPCION A SUSTITUIR
+                                <input type="text" name="Nro.Prescripcion" size="63"  class="diseñotexto">
+                    </td>
+                </tr>
+                <td><b>INFORMACION PROFECIONAL</b></td>
+                <tr>
+                    <td>PROFECIONAL:</td>
+                    <td>
+                        <select name="opcion" class="diseñotexto">
+                            <option>tipo de documento
+                            <option>cedula de ciudadania
+                            <option>targeta de indentidad
+                            </select>
+                        NOMBRE COMPLETO:
+                        <input type="text" name="nombre completo" size="74" class="diseñotexto">
+                    </td>
+                </tr>
+                <tr>
+                    <td>RESPONSABLE:</td>
+                    <td>
+                        <input type="text" name="nombre completo" size="111"  class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>REGISTRO MEDICO:</td>
+                    <td>
+                        <input type="text" name="registro medico" size="48"  class="diseñotexto">
+                        ESPECIALIDAD:
+                        <input type="text" name="registro medico" size="49"  class="diseñotexto">
+                    </td>
+                    <tr>
+                        <td>MEDICO GENERAL:</td>
+                        <td>
+                            <input type="text" name="medico que genera" size="53"  class="diseñotexto">
+                            FIRMA:
+                            <textarea name="firma" rows="2" cols="48" class="diseñotexto"></textarea>
+                        </td>
+                    </tr>
+                </tr>
+                <tr>
+                    <td><b></b></td>
+                    <td class="centrar">
+                        <br>
+                        <button type="button" id="continuar"class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Enviar</button>
+                        <input type="reset" value="Borrar" class="btn btn-primary">
+                    </td>
+                </tr>
+            </table>
+        
+    </form>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title colorletramodal" id="exampleModalLabel">enviar registo de incapacidad</h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body">
+                        <fieldset>
+                            <h2>desea enviar este registro de incapacidad</h2>
+                        <div class="checkbox">
+                
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+             
+              <button type="button" id="continuar1" class="btn btn-primary" data-toggle="modal" data-target="#alerta2">enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---segunda alerta del boton enviar-->
+      <div class="modal fade" id="alerta2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title colorletramodal" id="exampleModalLabel">copia de seguridad</h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="panel-body">
+                        <fieldset>
+                            <h2>una copia de este documento se a enviado a su correo</h2>
+                        <div class="checkbox">
+                
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="continuar1" class="btn btn-primary" data-toggle="modal" data-target="#alerta2" onclick="location='incapacidad_sura.html'">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<br>
+    <div class="final" >
+        <table>
+            <h6>
+                Verifique el correcto y completo diligenciamiento de este formato, este es indispensable para su tramitación. El pago de esta incapacidad está sujeto a verificación y
+                aprobación de EPS y Medicina Prepagada Suramericana S.A. Señor empleador, recuerde radicar esta incapacidad a través de la página de EPS y Medicina Prepagada
+                Suramericana S.A. www.epssura.com.co ó en nuestras oficinas Regionales
+            </h6>
+            <br>
+        </table>
+    </div>
+</body>
+</html>

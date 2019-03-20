@@ -1,0 +1,42 @@
+.menu{
+    background-color: #0D5E76;
+
+}
+
+.menu2{
+    background-color: #149EC6 ;
+    color: white;
+    
+}
+body{
+    background-image: url(img/fondo1.jpg)
+}
+.colorboton{
+    background-color: #149EC6;
+    color: white;
+}
+.grande{
+    color: white;
+    background-color: #0D5E76;
+    margin-left: 850%;
+}
+.formu{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+}
+.alinearfoto{
+    margin-left: 45%;
+}
+.fotoperfil{
+    margin-left: 40%;
+}
+.correr{
+    margin-left: 90%
+}
+.co{
+    margin-left: 78%
+}
+.cor{
+    margin-left: 71%
+}

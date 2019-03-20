@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/egresado1.css">
+    <link rel="stylesheet" href="css/EstilosJeny.css">
+    <link rel="icon" href="img/logo principal sena.png">
+    <title>Añadir egresados</title>
+</head>
+<body >
+    
+    <nav  class="navbar navbar-expand-lg navbar-light colormenu">
+            <a class="navbar-brand" href="administrador1.html" style="color:white">Administrador</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" style="color:white">Consultas<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Administrar Usuarios
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="consultar_usuario.html">Consultar Usuarios</a>
+                    <a class="dropdown-item" href="añadir_egresados.html">Añadir Egresado</a>
+                    <a class="dropdown-item" href="añadir_empresa.html">Añadir Empresa</a>
+                    <a class="dropdown-item" href="consultar_empresa.html">Consultar Empresa</a>
+
+                  </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="publicacionesper.html" style="color:white">Publicaciones en Espera<span class="sr-only">(current)</span></a>
+                </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Administrar Grupos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="crear_grupos.html">Crear Grupo</a>
+                      <a class="dropdown-item" href="consultar_Grupos.html">Consultar Grupo</a>
+                    </div>
+                    <li class="nav-item active">
+                        <button type="button" id="continuar"class="grande btn" data-toggle="modal" data-target="#exampleModal">Cuenta</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h2 class="modal-title" id="exampleModalLabel" style="color: rgba(7, 180, 51, 0.918)"></h2>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="panel-body">
+                                        <form role="form">
+                                            <fieldset>
+                                                <center><img src="img/cerrar.png" width="100" height="100" >
+                                                <br>
+                                                <br>
+                                                <h2><b>Administrador</b></h2><br><button type="button" class="btn colorboton" data-toggle="modal" data-target="#Configuración">Configuración</button>
+                                                <br>
+                                                <br>
+                                                <button type="button" class="btn colorboton " onclick="location.href='inicio.html'">Cerrar Sesion</button></span></h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </li>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+          <form id="regForm" action="/action_page.php">
+            <h1 id="h1" style="color: black">Registro de egresados</h1>
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab"> <h2 id="h2">Información personal</h2>
+    
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="fotoperfil">
+                             <img src="img/perfil.jpg"  width="20%" class="alinearfoto"><br>
+                             <input type="file"><br><br> 
+                        </div>
+                    </div>
+    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Primer nombre*</label>
+                            <input type="text"  class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Segundo nombre </label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Primer Apellido*</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Segundo Apellido*</label>
+                            <input type="text" placeholder="Segundo Apellido" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                                <label for="subject"> Tipo de documento</label>
+                                <select id="subject" name="subject" class="form-control" required="required">
+                                   <option value="na" selected="">--Seleccionar--</option>
+                                   <option value="service">cedula de ciudadania</option>
+                                   <option value="suggestions">Tarjeta de identidad</option>
+                                   <option value="product">Cédula de extranjeria</option>
+                                   <option value="product">Pasaporte</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label">Número de documento*</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label">Fecha de expedición*</label>
+                            <input type="date" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="control-label">Lugar de expedición*</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Fecha de nacimiento*</label>
+                            <input type="date" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group" >
+                            <label >Genero</label>
+                                <div class="radio">
+                                    <label class="label"><input class="input" type="radio" name="optradio" checked>Masculino</label>
+                                </div>
+                                <div class="radio">
+                                    <label class="label"><input class="input" type="radio" name="optradio">Femenino</label>
+                                </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">País de nacimiento</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Departamento nacimiento</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Dirección de residencia</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Correo electronico</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Correo corporativo</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Télefono movil</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">telefono fijo</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="control-label">Ext</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Fecha ingreso sena*</label>
+                            <input type="date" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Fecha de egreso sena*</label>
+                            <input type="date" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Número de ficha</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>  
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">Información adicional</label>
+                            <textarea name="comentarios" class="form-control"  rows="1%" cols="127%"></textarea>
+                        </div>
+                    </div>
+                </div>   
+                
+            </div>
+    
+            <div class="tab"><h2 id="h2">Información profesional</h2>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="form-group" >
+                            <label >¿Estudia actualmente?</label>
+                                <div class="radio">
+                                    <label class="label"><input class="input" type="radio" name="optradio" checked>Si</label>
+                                </div>
+                                <div class="radio">
+                                    <label class="label"><input class="input" type="radio" name="optradio">No</label>
+                                </div> 
+                        </div>
+                    </div>    
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="subject"> Tipo de Estudio</label>
+                                <select id="subject" name="subject" class="form-control" required="required">
+                                    <option value="na" selected="">--Seleccionar--</option>
+                                    <option value="service">Tecnica</option>
+                                    <option value="suggestions">Tecnologia</option>
+                                    <option value="product">Profesional</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="subject">Nombre de la carrera</label>
+                                <select id="subject" name="subject" class="form-control" required="required">
+                                    <option value="na" selected="">--Seleccionar--</option>
+                                    <option value="service">´analisis y desarrollo de sistemas</option>
+                                    <option value="suggestions"> turismo</option>
+                                    <option value="product">enfermeria</option>
+                                    <option value="product"> Deporte</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Fecha de inicio</label>
+                            <input maxlength="100" type="date"  class="form-control" />
+                        </div>
+                    </div>      
+                    <div class="col-md-6">
+                        <div class="form-group">
+                                <label class="control-label">Fecha de terminación</label>
+                                <input maxlength="100" type="date"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">Nombre de la institución</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="botones btn btn-lg" data-toggle="modal" data-target="#modalprofesion">
+                     Añadir estudio</button>
+                <!-- Modal -->
+                <div class="modal fade" id="modalprofesion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 id="h5" class="modal-title" id="exampleModalLabel"> Profesión adicional</h5>
+                                <!-- Modal -->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" >
+                                            <label >¿Estudia actualmente?</label>
+                                                <div class="radio">
+                                                    <label class="label"><input class="input" type="radio" name="optradio" checked>Si</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label class="label"><input class="input" type="radio" name="optradio">No</label>
+                                                </div> 
+                                        </div>
+                                    </div>    
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="subject"> Tipo de Estudio</label>
+                                                <select id="subject" name="subject" class="form-control" required="required">
+                                                    <option value="na" selected="">--Seleccionar--</option>
+                                                    <option value="service">Tecnica</option>
+                                                    <option value="suggestions">Tecnologia</option>
+                                                    <option value="product">Profesional</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="subject">Nombre de la carrera</label>
+                                                <select id="subject" name="subject" class="form-control" required="required">
+                                                    <option value="na" selected="">--Seleccionar--</option>
+                                                    <option value="service">´analisis y desarrollo de sistemas</option>
+                                                    <option value="suggestions"> turismo</option>
+                                                    <option value="product">enfermeria</option>
+                                                    <option value="product"> Deporte</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Fecha de inicio</label>
+                                            <input maxlength="100" type="date"  class="form-control" />
+                                        </div>
+                                    </div>      
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Fecha de terminación</label>
+                                            <input maxlength="100" type="date"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Nombre de la institución</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>         
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="botones btn btn-lg" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="botones btn btn-lg" onclick="location='proyectoEgresados.html'">guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+    
+            <div class="tab"><h2 id="h2">Información laboral</h2>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="form-group" >
+                            <label >¿Trabaja actualmente?</label>
+                                <div class="radio">
+                                    <label class="label"><input class="input" type="radio" name="optradio" checked>Si</label>
+                                </div>
+                                <div class="radio">
+                                    <label class="label"><input class="input" type="radio" name="optradio">No</label>
+                                </div> 
+                        </div>
+                    </div>   
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Nombre de la empresa</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Dirección</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Fecha de Inicio</label>
+                            <input maxlength="100" type="date"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label"> fecha de terminación</label>
+                            <input maxlength="100" type="date"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label"> Cargo que desempeña</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="subject"> Rango salarial</label>
+                                <select id="subject" name="subject" class="form-control" required="required">
+                                    <option value="na" selected="">--Seleccionar--</option>
+                                    <option value="service">500.000 - 1.000.000</option>
+                                    <option value="suggestions">1.000.000 - 1.500.00</option>
+                                    <option value="product">2.000.000</option>
+                                </select>
+                        </div>
+                    </div>                        
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="subject">Tipo de contracto</label>
+                                <select id="subject" name="subject" class="form-control" required="required">
+                                    <option value="na" selected="">--Seleccionar--</option>
+                                    <option value="service">indefinido</option>
+                                    <option value="suggestions">Temporal</option>
+                                    <option value="suggestions">practico </option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Button trigger modal -->
+                    <button type="button" class="botones btn btn-lg" data-toggle="modal" data-target="#modaltrabajo">
+                        Añadir trabajo
+                    </button>
+                <!-- Modal -->
+                <div class="modal fade" id="modaltrabajo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 id="h5" class="modal-title" id="exampleModalLabel"> Trabajo adicional</h5>
+                                <!-- Modal -->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                     <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" >
+                                            <label >¿Trabaja actualmente?</label>
+                                                <div class="radio">
+                                                    <label class="label"><input class="input" type="radio" name="optradio" checked>Si</label>
+                                                </div>
+                                                <div class="radio">
+                                                    <label class="label"><input class="input" type="radio" name="optradio">No</label>
+                                                </div> 
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Nombre de la empresa</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Dirección</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Fecha de Inicio</label>
+                                            <input maxlength="100" type="date"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label"> fecha de terminación</label>
+                                            <input maxlength="100" type="date"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label"> Cargo que desempeña</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="subject"> Rango salarial</label>
+                                                <select id="subject" name="subject" class="form-control" required="required">
+                                                    <option value="na" selected="">--Seleccionar--</option>
+                                                    <option value="service">500.000 - 1.000.000</option>
+                                                    <option value="suggestions">1.000.000 - 1.500.00</option>
+                                                    <option value="product">2.000.000</option>
+                                                </select>
+                                        </div>
+                                    </div>                        
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="subject">Tipo de contracto</label>
+                                                <select id="subject" name="subject" class="form-control" required="required">
+                                                    <option value="na" selected="">--Seleccionar--</option>
+                                                    <option value="service">indefinido</option>
+                                                    <option value="suggestions">Temporal</option>
+                                                    <option value="suggestions">practico </option>
+                                                </select>
+                                        </div>
+                                    </div> 
+                                </div>  
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="botones btn btn-lg" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="botones btn btn-lg" onclick="location='proyectoEgresados.html'">guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="tab"><h2 id="h2">Referencias personales</h2>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="subject">Tipo de referencia</label>
+                                <select id="subject" name="subject" class="form-control" required="required">
+                                    <option value="na" selected="">--Seleccionar--</option>
+                                    <option value="service">Familiar</option>
+                                    <option value="suggestions">Laboral</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Primer nombre</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Segundo nombre</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div>                         
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Primer Apellido</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Segundo Apellido</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">Cargo que desempeña</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">telefono movil</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div>                                  
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">telefono fijo</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="control-label">Ext</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Parentesco</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div>
+                  
+                </div>
+    
+                <!-- Button trigger modal -->
+                    <button type="button" class="botones btn btn-lg" data-toggle="modal" data-target="#modalreferencia">
+                     Añadir referencia
+                    </button>
+                <!-- Modal -->
+                <div class="modal fade" id="modalreferencia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 id="h5" class="modal-title" id="exampleModalLabel"> Referencia adicional</h5>
+                                <!-- Modal -->
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="subject">Tipo de referencia</label>
+                                                <select id="subject" name="subject" class="form-control" required="required">
+                                                    <option value="na" selected="">--Seleccionar--</option>
+                                                    <option value="service">Familiar</option>
+                                                    <option value="suggestions">Laboral</option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Primer nombre</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Segundo nombre</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div>                         
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Primer Apellido</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Segundo Apellido</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="control-label">Cargo que desempeña</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div> 
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">telefono movil</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div>                                  
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label class="control-label">telefono fijo</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">Ext</label>
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="control-label">Parentesco</label>
+                                            <input maxlength="100" type="text"  class="form-control" />
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="botones btn btn-lg" data-dismiss="modal">Cerrar </button>
+                                <button type="button" class="botones btn btn-lg" onclick="location='proyectoEgresados.html'">guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="tab"><h2 id="h2" align="center">Finalizar registro</h2>
+                <div class="form-group">
+                    <label class="control-label" style="margin-left: 400px">Ingrese contraseña</label>
+                    <br>
+                    <input style="margin-left: 400px" maxlength="100" type="password"  class="form-control2" />
+                </div>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label class="control-label" style="margin-left: 400px">Ingrese nuevamente contraseña</label>
+                    <br>
+                    <input style="margin-left: 400px" maxlength="100" type="password"  class="form-control2" />
+                </div>
+                <br>
+                <button style="margin-left:  600px" type="button" class="botones btn btn-lg" onclick="location='Administrador1.html'">Finalizar</button>
+            </div>
+            <br>
+            <br>
+            <br>
+    
+            
+            <div style="overflow:auto;">
+              <div style="float:right;">
+                <button  class="botones btn btn-lg" type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+                <button class="botones btn btn-lg" type="button" id="nextBtn" onclick="nextPrev(1)">Continuar</button>
+              </div>
+            </div>
+            
+            <!-- Circles which indicates the steps of the form: -->
+            <div style="text-align:center;margin-top:40px;">
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+              <span class="step"></span>
+            </div>
+        </form>
+          
+        <script>
+          var currentTab = 0; // Current tab is set to be the first tab (0)
+          showTab(currentTab); // Display the crurrent tab
+          
+          function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+              document.getElementById("prevBtn").style.display = "none";
+            } else {
+              document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+             document.getElementById("nextBtn").innerHTML = "Finalizar";
+            } 
+            //else {
+             // document.getElementById("nextBtn").innerHTML = "Next";
+           // }
+            //... and run a function that will display the correct step indicator:
+           // fixStepIndicator(n)
+          }
+          
+          function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+              // ... the form gets submitted:
+              document.getElementById("regForm").submit();
+              return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+          }
+          
+          function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].getElementsByTagName("input");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+              // If a field is empty...
+              //if (y[i].value == "") {
+                // add an "invalid" class to the field:
+              //  y[i].className += " invalid";
+                // and set the current valid status to false
+               // valid = false;
+             // }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+              document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+          }
+          
+          function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+              x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class on the current step:
+           // x[n].className += " active";
+          }
+        </script>
+          <!--modal configurtacion-->
+          <div class="modal fade" id="Configuración" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel" style="color: rgba(7, 180, 51, 0.918)">Configuración</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+  
+  
+                  </div>
+                  <div class="modal-body">
+                    <div class="panel-body">
+            <h3 style="color: rgba(83, 92, 85, 0.918)">Cambio de contraseña</h3> <br>
+            <div class="form-group">
+                <input class="form-control" placeholder="Ingresa tu contraseña actual*" name="password" type="password" autofocus="">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" placeholder="Ingresa tu nueva contraseña*" name="password" type="password" autofocus="">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" placeholder="Ingresa nuevamente tu nueva contraseña*" name="password" type="password" value="">
+                <span class="glyphicon glyphicon-search"></span>
+            </div><br>
+  
+                      <form role="form">
+                          <fieldset>
+                             
+                              <div class="checkbox">
+                             
+                              </div>
+                            </div>
+                  </div>
+                  <div class="modal-footer">
+                   
+                    <button type="button" class="colormenu btn" data-toggle="modal" data-target="#cambioExitoso">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="cambioExitoso" tabindex="-1" role="dialog" aria-labelledby="examplemodalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                  
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="panel-body">
+                        <DIV class="centrardiv2">
+                          <img src="img/registro.png.png" width="100" height="100">
+                      
+                          <h1 style="color: rgba(7, 180, 51, 0.918)">Cambio exitoso!</h1>
+                            </DIV>
+                            
+                              
+                            
+                            
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="colormenu btn" onclick="location='inicio.html'">Cerrar</button>
+                     
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            <!------------------------------------------------------------>
+          <div  class="pie3">
+            <table>
+             <br>
+             <br>
+             <br>
+            </table>
+        </div>
+</body>
+</html>

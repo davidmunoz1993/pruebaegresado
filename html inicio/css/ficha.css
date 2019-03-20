@@ -1,0 +1,47 @@
+body{
+    background-color: #F5EFF4 ;
+}
+.menuscolor{
+    background-color: #0D5E76;
+}
+.grupos{
+    background-color: #149EC6  ;
+    text-align: center;
+}
+.fi{
+    background-color: rgba(255, 68, 0, 0.205);
+    text-align: center;
+}
+.divimagen{
+    background-color: rgb(128, 128, 128);
+}
+.divsclaros{
+    
+    background-color: rgba(128, 128, 128, 0.349);
+}
+.divclaro{
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    margin-top: 0%;
+    background-color: rgba(70, 101, 101, 0.356);
+}
+.foto{
+    margin-right: 100%;
+}.divgrande{
+    background-color: #F5EFF4;
+}
+.colorboton{
+    background-color: #149EC6;
+}
+.grande{
+    color: #ebebeb;
+    background-color: orangered;
+    margin-left: 850%;
+}
+
+.grande7{
+    color: white;
+    background-color: #0D5E76 ;
+    margin-left: 850%;
+}

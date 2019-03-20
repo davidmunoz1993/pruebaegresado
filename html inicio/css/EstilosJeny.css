@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #F5EFF4 ;
+  }
+  
+  .fondo{
+    background-color: #F5EFF4 ;
+  }
+
+  #regForm {
+    background-color:#F5EFF4;
+    margin: 40px auto;
+    font-family: Raleway;
+    padding: 40px;
+    width: 90%;
+    min-width: 300px;
+  }
+
+  .form-control2 {
+
+    width: 40%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #149EC6;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+  
+  h1 {
+    text-align: center;  
+  }
+  
+  input {
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    
+  }
+  
+  /* Mark input boxes that gets an error on validation: */
+  input.invalid {
+    background-color: #ffdddd;
+  }
+  
+  /* Hide all steps by default: */
+  .tab {
+    display: none;
+  }
+  
+.titulo{
+  background-color: #0D5E76;
+  width:100%;
+  height: 60px;
+  color: white;
+}
+
+  button {
+    background-color: orangered;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  #prevBtn {
+    background-color: #149EC6 ;
+  }
+  
+  /* Make circles that indicate the steps of the form: */
+  .step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #149EC6;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  
+  .step.active {
+    opacity: 1;
+  }
+  
+  /* Mark the steps that are finished and valid: */
+  .step.finish {
+    background-color: #0D5E76;
+  }
+
+  .contenidoarriba{
+    background-color: #F5EFF4;
+    
+}
+
+ .contenidoabajo{
+    background-color:orangered;
+    height: 3%;
+    color: white;
+    padding: 1%;
+}
+#h1{
+  color: rgb(19, 112, 32);
+}
+#h2{
+    color: black;
+
+}
+#h5{
+  color:;
+}
+
+.fotoperfil{
+    margin-left: 40%;
+}
+.label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+.input {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -2px;
+  *overflow: hidden;
+}
+.botones{
+  background-color: #149EC6;
+}
+
+body{
+
+  background-color: #F5EFF4;
+  
+}
+
+.centrarchulito{
+
+  margin-left: 43%;
+}
+

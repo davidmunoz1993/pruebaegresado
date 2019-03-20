@@ -1,0 +1,51 @@
+.contenidoprincipal{
+    background-color: coral;
+    font-style: 40px;
+}
+.contenidosecundario{
+    background-color: aqua;
+    font-size: 10px;
+    font-family: 'segoe UI', tahoma, geneva, verdana,sans-serif;
+}
+
+#tortuga
+{
+    color: blue;
+}h1{
+    color:rgb(17, 0, 255);
+    text-align: center;
+}
+
+body
+{
+    background-image: url(img/abc.jpg);
+    
+}
+/*name .nombre
+id #name
+defecto predeterminados
+
+
+table.rojo
+taba.azull
+
+cuando se utiliza los : es para darle una funcion;
+
+a:link{
+    background-color: red;
+}
+a:hover{
+    background-color: aqua;
+}
+a:visited{
+    background-color: chartreuse;
+} */
+
+a:visited{
+    background-color: darkblue;
+}
+
+contenidoprincipal.contenido{
+    width: 1350px;
+    height: 150px;
+}

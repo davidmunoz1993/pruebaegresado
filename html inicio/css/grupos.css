@@ -1,0 +1,36 @@
+.menucolor{
+    background-color:  #0D5E76;
+}
+.gru{
+    background-color: #149EC6 ;
+    text-align: center;
+}
+.ficha{
+    background-color: rgba(255, 68, 0, 0.205);
+    text-align: center;
+}
+body{
+    background-image: url(img/fondo1.jpg)
+}
+.divclaro{
+    background-color: rgba(128, 128, 128, 0.349);
+    text-align: center;
+}
+.inputdiseño{
+    color: black;
+    background-color: #fff;
+    background-clip: padding-box;border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.colorboton{
+    background-color: orangered;
+}
+.colorboton{
+    background-color: #149EC6 ;
+}
+.grande{
+    color: #ebebeb;
+    background-color: orangered;
+    margin-left: 850%;
+}

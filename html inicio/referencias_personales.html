@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="icon" href="img/logo.jpeg">
+    <title>Perfil-Referencias-Personales</title>
+</head>
+<body>
+        
+    <nav class="navbar navbar-expand-lg navbar-light menu">
+            <a class="navbar-brand" href="egresado.html" style="color:white">Egresados Sena</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="oferta_laboral.html" style="color:white">Oferta Laboral<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="grupos.html" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Grupos
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="grupos.html">Ficha:1564827</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="perfil.html" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Perfil
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="perfil.html">Informacion Personal</a>
+                    <a class="dropdown-item" href="informacion_laboral.html">Informacion Laboral</a>
+                    <a class="dropdown-item" href="informacion_profecional.html">Informacion Profecional</a>
+                    <a class="dropdown-item" href="referencias_personales.html">Referencias Personales</a>
+                  </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Publicaciones
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="buscar_publicaciones.html">Buscar Publicaciones</a>
+                      <a class="dropdown-item" href="añadir_publicaciones.html">Añadir Publicaciones</a>
+                    </div>
+                    <li class="nav-item active">
+                  
+                    </li>
+                    <li class="nav-item active">
+                        <button style="margin-left: 680px"  type="button" id="continuar"class="grande btn" data-toggle="modal" data-target="#exampleModal">Cuenta</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h2 class="modal-title" id="exampleModalLabel" style="color: rgba(7, 180, 51, 0.918)"></h2>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="panel-body">
+                                        <form role="form">
+                                            <fieldset>
+                                                <center><img src="img/cerrar.png" width="100" height="100" >
+                                                <br>
+                                                <br>
+                                                <h2><b>Pepito Perez Almendraz</b></h2><br><button type="button" class="btn colorboton" data-toggle="modal" data-target="#Configuración">Configuración</button>
+                                                <br>
+                                                <br>
+                                                <button type="button" class="btn colorboton " onclick="location.href='inicio.html'">Cerrar Sesion</button></span></h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </li>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+          <Div class="formu">
+            <div class="tab"><h2 style="text-align: center;" id="h2">Referencias personales</h2>
+                <div class="form-group row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="subject">Tipo de referencia</label>
+                                <select id="subject" name="subject" class="form-control" required="required">
+                                    <option value="na" selected="">--Seleccionar--</option>
+                                    <option value="service">Familiar</option>
+                                    <option value="suggestions">Laboral</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Primer nombre</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Segundo nombre</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div>                         
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Primer Apellido</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Segundo Apellido</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label class="control-label">Cargo que desempeña</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div> 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">telefono movil</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div>                                  
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="control-label">telefono fijo</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label class="control-label">Ext</label>
+                            <input type="text" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Parentesco</label>
+                            <input maxlength="100" type="text"  class="form-control" />
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+      </Div>
+      <!-- Button trigger modal -->
+      <button type="button" class="botones co colorboton btn btn-lg" data-toggle="modal" data-target="#modalreferencia">
+       ver referencias
+       </button>
+       <button type="button" class="botones  colorboton btn btn-lg" >
+        editar
+       </button>
+       <br><br>
+   <!-- Modal -->
+   <div class="modal fade" id="modalreferencia" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+       <div class="modal-dialog" role="document">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h5 id="h5" class="modal-title" id="exampleModalLabel"> Referencia adicional</h5>
+                   <!-- Modal -->
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                   </button>
+               </div>
+               <div class="modal-body">
+                   <div class="form-group row">
+                       <div class="col-md-12">
+                           <div class="form-group">
+                               <label for="subject">Tipo de referencia</label>
+                                   <select id="subject" name="subject" class="form-control" required="required">
+                                       <option value="na" selected="">--Seleccionar--</option>
+                                       <option value="service">Familiar</option>
+                                       <option value="suggestions">Laboral</option>
+                                   </select>
+                           </div>
+                       </div>
+                       <div class="col-md-6">
+                           <div class="form-group">
+                               <label class="control-label">Primer nombre</label>
+                               <input maxlength="100" type="text"  class="form-control" />
+                           </div>
+                       </div> 
+                       <div class="col-md-6">
+                           <div class="form-group">
+                               <label class="control-label">Segundo nombre</label>
+                               <input maxlength="100" type="text"  class="form-control" />
+                           </div>
+                       </div>                         
+                       <div class="col-md-6">
+                           <div class="form-group">
+                               <label class="control-label">Primer Apellido</label>
+                               <input maxlength="100" type="text"  class="form-control" />
+                           </div>
+                       </div> 
+                       <div class="col-md-6">
+                           <div class="form-group">
+                               <label class="control-label">Segundo Apellido</label>
+                               <input maxlength="100" type="text"  class="form-control" />
+                           </div>
+                       </div> 
+                       <div class="col-md-12">
+                           <div class="form-group">
+                               <label class="control-label">Cargo que desempeña</label>
+                               <input maxlength="100" type="text"  class="form-control" />
+                           </div>
+                       </div> 
+                       <div class="col-md-6">
+                           <div class="form-group">
+                               <label class="control-label">telefono movil</label>
+                               <input maxlength="100" type="text"  class="form-control" />
+                           </div>
+                       </div>                                  
+                       <div class="col-md-4">
+                           <div class="form-group">
+                               <label class="control-label">telefono fijo</label>
+                               <input maxlength="100" type="text"  class="form-control" />
+                           </div>
+                       </div>
+                       <div class="col-md-2">
+                           <div class="form-group">
+                               <label class="control-label">Ext</label>
+                               <input type="text" class="form-control"/>
+                           </div>
+                       </div>
+                       <div class="col-md-6">
+                           <div class="form-group">
+                               <label class="control-label">Parentesco</label>
+                               <input maxlength="100" type="text"  class="form-control" />
+                           </div>
+                       </div>
+                   </div> 
+               </div>
+               <div class="modal-footer">
+                   <button type="button" class="menu btn btn-lg" data-dismiss="modal">Cerrar </button>
+                   <button type="button" class="menu btn btn-lg" onclick="mensaje">guardar</button>
+               </div>
+           </div>
+       </div>
+   </div>
+   <!--modal configurtacion-->
+   <div class="modal fade" id="Configuración" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="exampleModalLabel" style="color: rgba(7, 180, 51, 0.918)">Configuración</h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+
+
+            </div>
+            <div class="modal-body">
+              <div class="panel-body">
+      <h3 style="color: rgba(83, 92, 85, 0.918)">Cambio de contraseña</h3> <br>
+      <div class="form-group">
+          <input class="form-control" placeholder="Ingresa tu contraseña actual*" name="password" type="password" autofocus="">
+      </div><br>
+      <div class="form-group">
+          <input class="form-control" placeholder="Ingresa tu nueva contraseña*" name="password" type="password" autofocus="">
+      </div><br>
+      <div class="form-group">
+          <input class="form-control" placeholder="Ingresa nuevamente tu nueva contraseña*" name="password" type="password" value="">
+          <span class="glyphicon glyphicon-search"></span>
+      </div><br>
+
+                <form role="form">
+                    <fieldset>
+                       
+                        <div class="checkbox">
+                       
+                        </div>
+                      </div>
+            </div>
+            <div class="modal-footer">
+             
+              <button type="button" class="menu btn" data-toggle="modal" data-target="#cambioExitoso">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="cambioExitoso" tabindex="-1" role="dialog" aria-labelledby="examplemodalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+            
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="panel-body">
+                  <DIV class="centrardiv2">
+                    <img src="img/registro.png.png" width="100" height="100">
+                
+                    <h1 style="color: rgba(7, 180, 51, 0.918)">Cambio exitoso!</h1>
+                      </DIV>
+                      
+                        
+                      
+                      
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="menu btn" onclick="location='inicio.html'">Cerrar</button>
+               
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      <!------------------------------------------------------------>
+      <div style="background-color:#0D5E76;  " >
+  
+    
+      <br>
+      <h5 style="text-align: center; color: white;padding-bottom: 4px">Copyright © 2019 EgreSoft. All rights reserved.
+                 </h5> 
+                 <br>
+      
+   
+    </div>
+    </div>
+</body>
+</html>

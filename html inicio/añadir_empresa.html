@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/egresado1.css">
+    <link rel="icon" href="img/logo.jpeg">
+    <title>Añadir Empresa</title>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light colormenu">
+            <a class="navbar-brand" href="administrador1.html" style="color:white">Administrador</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" style="color:white">Consultas<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Administrar Usuarios
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="consultar_usuario.html">Consultar Usuarios</a>
+                    <a class="dropdown-item" href="añadir_egresados.html">Añadir Egresado</a>
+                    <a class="dropdown-item" href="añadir_empresa.html">Añadir Empresa</a>
+                    <a class="dropdown-item" href="consultar_empresa.html">Consultar Empresa</a>
+
+                  </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="publicacionesper.html" style="color:white">Publicaciones en Espera<span class="sr-only">(current)</span></a>
+                </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Administrar Grupos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="crear_grupos.html">Crear Grupo</a>
+                      <a class="dropdown-item" href="consultar_Grupos.html">Consultar Grupo</a>
+                    </div>
+                    <li class="nav-item active">
+                        <button type="button" id="continuar"class="grande btn" data-toggle="modal" data-target="#exampleModal">Cuenta</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h2 class="modal-title" id="exampleModalLabel" style="color: rgba(7, 180, 51, 0.918)"></h2>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="panel-body">
+                                        <form role="form">
+                                            <fieldset>
+                                                <center><img src="img/cerrar.png" width="100" height="100" >
+                                                <br>
+                                                <br>
+                                                <h2><b>Administrador</b></h2><br><button type="button" class="btn colorboton" data-toggle="modal" data-target="#Configuración">Configuración</button>
+                                                <br>
+                                                <br>
+                                                <button type="button" class="btn colorboton " onclick="location.href='inicio.html'">Cerrar Sesion</button></span></h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </li>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+          <DIV class="centrardiv">
+          
+            
+
+                <div  class="container">
+                  
+                 
+                
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+                        
+                      <form role="form"> <br>
+                      <h2 >Registro de empresa </h2>
+                   
+                
+                 
+                      <br>
+                
+                    <div class="row"> 
+                
+                          <div class="col-xs-12 col-sm-6 col-md-6">
+                      
+                          <div class="form-group">
+                            <input type="text" name="Nombre de la empresa" id="Nombre de la empresa" class="form-control input-lg" placeholder="Nombre de la empresa*" tabindex="1">
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <input type="email" name="Correo Electronico" id="Correo Electronico" class="form-control input-lg" placeholder="Correo Electrónico*" tabindex="2">
+                          </div>
+                        </div>
+                   
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                          <input type="text" name="Nit*" id="Nit*" class="form-control input-lg" placeholder="Nit*" tabindex="3"> 
+                      </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-6 col-md-6">
+                  
+                      <div class="form-group">
+                        <input type="text" name="Direccióndelaempresa" id="Direccióndelaempresa" class="form-control input-lg" placeholder="Dirección de la empresa*" tabindex="4"> 
+                      </div>
+                      </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <input type="text" name="Sector_laboral" id="Sector_laboral" class="form-control input-lg" placeholder="Sector laboral*" tabindex="5">
+                          </div>
+                        </div>
+                        
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <input type="text" name="numero_egresados" id="numero_egresados" class="form-control input-lg" placeholder="Número egresados*" tabindex="6">
+                          </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6">
+                          <div class="form-group">
+                            <textarea class="form-control" rows="5" id="comment" class="form-control input-lg" placeholder="Descripción de la empresa*" tabindex="6"></textarea>
+                          </div>
+                        </div>
+                      <div class="row">
+                        <div class="col-xs-4 col-sm-3 col-md-3">
+                        
+                        </div>
+                
+                      </div>
+                      
+                      <hr class="colorgraph">
+                      <div class="row">
+                      </div>
+                
+                    </form>
+                
+                  </div>
+                
+                </div>
+                
+                <button type="button" id="continuar"class="botongrande" data-toggle="modal" data-target="#exampleMo">Continuar  </button>
+                
+                
+                      </DIV>
+                      </DIV>
+                      
+                       </div>
+                      
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleMo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h2 class="modal-title" id="exampleModalLabel" style="color: rgba(7, 180, 51, 0.918)">Finalizar registro</h2>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="panel-body">
+                                <form role="form">
+                                    <fieldset>
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Ingresa tu contraseña*" name="password" type="password" autofocus="">
+                                        </div><br>
+                                        <div class="form-group">
+                                            <input class="form-control" placeholder="Ingresa nuevamente tu contraseña*" name="password" type="password" value="">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </div><br>
+                                        <div class="checkbox">
+                                       
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="modal-footer">
+                             
+                              <button type="button" class="colormenu btn" data-toggle="modal" data-target="#registroexitoso">Guardar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+                
+                      <div class="modal fade" id="registroexitoso" tabindex="-1" role="dialog" aria-labelledby="examplemodalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                          
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="panel-body">
+                                <DIV class="centrardiv2">
+                                  <img src="img/registro.png.png" width="100" height="100">
+                              
+                                  <h1 style="color: rgba(7, 180, 51, 0.918)">Registro exitoso!</h1>
+                                    </DIV>
+                                    
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="colormenu btn" data-dismiss="modal" onclick="location='Administrador1.html'">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            <br>
+            <br>
+            <br>
+        </div>
+          <!--modal configurtacion-->
+          <div class="modal fade" id="Configuración" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel" style="color: rgba(7, 180, 51, 0.918)">Configuración</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+  
+  
+                  </div>
+                  <div class="modal-body">
+                    <div class="panel-body">
+            <h3 style="color: rgba(83, 92, 85, 0.918)">Cambio de contraseña</h3> <br>
+            <div class="form-group">
+                <input class="form-control" placeholder="Ingresa tu contraseña actual*" name="password" type="password" autofocus="">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" placeholder="Ingresa tu nueva contraseña*" name="password" type="password" autofocus="">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" placeholder="Ingresa nuevamente tu nueva contraseña*" name="password" type="password" value="">
+                <span class="glyphicon glyphicon-search"></span>
+            </div><br>
+  
+                      <form role="form">
+                          <fieldset>
+                             
+                              <div class="checkbox">
+                             
+                              </div>
+                            </div>
+                  </div>
+                  <div class="modal-footer">
+                   
+                    <button type="button" class="colormenu btn" data-toggle="modal" data-target="#cambioExitoso">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="cambioExitoso" tabindex="-1" role="dialog" aria-labelledby="examplemodalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                  
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="panel-body">
+                        <DIV class="centrardiv2">
+                          <img src="img/registro.png.png" width="100" height="100">
+                      
+                          <h1 style="color: rgba(7, 180, 51, 0.918)">Cambio exitoso!</h1>
+                            </DIV>
+                            
+                              
+                            
+                            
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="colormenu btn" onclick="location='inicio.html'">Cerrar</button>
+                     
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            <!------------------------------------------------------------>
+          <div  class="pie3">
+            <table>
+               <br>
+               <br>
+               <br>
+            </table>
+        </div>
+</body>
+</html>

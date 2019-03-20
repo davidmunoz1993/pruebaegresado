@@ -1,0 +1,125 @@
+.colormenu{
+    background-color: #0D5E76;
+}
+
+.colormenu2{
+    background-color:#149EC6;
+    color: white;
+    
+}
+.COLORDIV{
+    background-color: #0D5E76;
+    text-align: center;
+}
+body{
+   background-color: #F5EFF4;
+}
+
+.pie3{
+
+  width:100%;
+  color: white;
+    background-color: #0D5E76;
+}
+.divclaro{
+    text-align: center;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    margin-top: 0%;
+    background-color: rgba(70, 101, 101, 0.356);
+}
+.foto{
+    margin-right: 100%;
+}
+
+.buttoncabeza{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.fondoEgresado{
+    background-color: #F5EFF4;
+}
+.divoscuro{
+    text-align: center;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    margin-top: -50%;
+    background-color: grey;
+    margin: 0px 50px 50px 250px;
+}
+.imagen{
+    margin-top: 100%
+}
+.dos{
+    margin-top: -4%
+}
+.egresado{
+    margin-left: 22%;   
+}
+.colorboton{
+    background-color: #149EC6;
+}
+.grande{
+    color: #ebebeb;
+    background-color: #0D5E76 ;
+    margin-left: 650%;
+}
+
+/*marlom*/
+
+.centrardiv {
+
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    margin-top: 0%;
+    background-color: "";
+    
+    }
+    .botongrande{
+        color: #ebebeb;
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.0;
+        border-radius: 0.3rem;
+        background-color: #149EC6 ;
+        margin-left:20%;
+        margin-bottom: 0%;
+        margin-top: 30%;
+        width: 11%;
+        height: 40%;
+      }
+
+      .botongrande6{
+        color: #ebebeb;
+        padding: 0.5rem 1rem;
+        font-size: 1.25rem;
+        line-height: 1.0;
+        border-radius: 0.3rem;
+        background-color: #149EC6 ;
+        margin-left:20%;
+        margin-bottom: 0%;
+        margin-top: 30%;
+        width: 11%;
+        height: 40%;
+    }
+
+
+.cabeza{
+text-align: center;
+font-family: "times";
+}
+
+
+    
+

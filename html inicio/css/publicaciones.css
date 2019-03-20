@@ -1,0 +1,39 @@
+body{
+    background-color: #F5EFF4;
+}
+.color{
+    background-color: #0D5E76;
+}
+
+.color2{
+    background-color: #149EC6;
+    color: white;
+}
+.botoncuenta{
+    color: #ebebeb;
+    background-color:#0D5E76   ;
+    margin-left: 850%;
+}
+.colorboton{
+    background-color:#149EC6 ;
+    color: white;
+}
+.fondo{
+    opacity: 0.8;
+    background-color: #F5EFF4 ;
+    margin: 0px 230px 0px 170px;
+    border-color: #d1d1d1;
+    color: black;
+}
+.diseño{
+    background-color: #fff;
+    background-clip: padding-box;border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.correr{
+    margin-left: 86%
+}
+.correr1{
+    margin-left: 73% 
+}

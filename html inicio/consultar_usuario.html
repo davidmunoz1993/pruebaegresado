@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/egresado1.css">
+    <link rel="icon" href="img/logo.jpeg">
+    <title>Consultar Usuarios</title>
+</head>
+<body>
+   
+    <nav class="navbar navbar-expand-lg navbar-light colormenu">
+            <a class="navbar-brand" href="administrador1.html" style="color:white">Administrador</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" style="color:white">Consultas<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Administrar usuarios
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="consultar_usuario.html">Consultar usuarios</a>
+                 
+                    <a class="dropdown-item" href="consultar_empresa.html">Consultar empresa</a>
+
+                  </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="publicacionesper.html" style="color:white">Publicaciones en espera<span class="sr-only">(current)</span></a>
+                </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Administrar grupos
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="crear_grupos.html">Crear grupo</a>
+                      <a class="dropdown-item" href="consultar_Grupos.html">Consultar grupo</a>
+                    </div>
+                    <li class="nav-item active">
+                        <button type="button" id="continuar"class="grande btn" data-toggle="modal" data-target="#exampleModal">Cuenta</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h2 class="modal-title" id="exampleModalLabel" style="color: rgba(7, 180, 51, 0.918)"></h2>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="panel-body">
+                                        <form role="form">
+                                            <fieldset>
+                                                <center><img src="img/cerrar.png" width="100" height="100" >
+                                                <br>
+                                                <br>
+                                                <h2><b>Administrador</b></h2><br><button type="button" class="btn colorboton" data-toggle="modal" data-target="#Configuración">Configuración</button>
+                                                <br>
+                                                <br>
+                                                <button type="button" class="btn colorboton " onclick="location.href='inicio.html'">Cerrar sesión</button></span></h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </li>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="divclaro">
+            <br>
+            <br>
+            <table  align="center" id="t01" border="1">
+                    <tr>
+                        <th class="q2">Id</th>
+                        <th class="q2">Nombre Del usuario</th>
+                        <th class="q2">Numero Del documento</th>
+                        <th class="q2">Numero Del programa</th> 
+                        <th class="q2">Editar</th>
+                        <th class="q2">Eliminar</th>
+                        <TH class="q2">Habilitar</TH>
+                        <TH class="q2">Inhabilitar</TH>
+                    </tr>
+                    <tr>
+                        <td class="f2">1</td>
+                        <td class="f2">jhonatan mejia</td>
+                        <td class="f2">1000884732</td>
+                        <td class="f2">1564827</td>
+                        <td class="f2" ><input type="button" value="editar" class="colormenu btn"></td>
+                        <td class="f2" ><input type="button" value="Eliminar" class="colormenu btn" data-toggle="modal" data-target="#registroexitoso"></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                    </tr>
+                    <tr>
+                        <td class="f2">2</td>
+                        <td class="f2">sebastian goez</td>
+                        <td class="f2">1035305101</td>
+                        <td class="f2">1564827</td>
+                        <td class="f2" ><input type="button" value="editar" class="colormenu btn"></td>
+                        <td class="f2" ><input type="button" value="Eliminar" class="colormenu btn"></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                    </tr>
+                    <tr>
+                        <td class="f2">3</td>
+                        <td class="f2">jenny aristizalbal</td>
+                        <td class="f2">1000188300</td>
+                        <td class="f2">1564827</td>
+                        <td class="f2" ><input type="button" value="editar" class="colormenu btn"></td>
+                        <td class="f2" ><input type="button" value="Eliminar" class="colormenu btn"></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                    </tr>
+                  <tr>
+                        <td class="f2">4</td>
+                        <td class="f2">julian muñoz</td>
+                        <td class="f2">1098732588</td>
+                        <td class="f2">1564827</td>
+                        <td class="f2" ><input type="button" value="editar" class="colormenu btn"></td>
+                        <td class="f2" ><input type="button" value="Eliminar" class="colormenu btn"></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                    </tr>
+                    <tr>
+                        <td class="f2">5</td>
+                        <td class="f2">marlon tapiaz</td>
+                        <td class="f2">1000188503</td>
+                        <td class="f2">1564827</td>
+                        <td class="f2" ><input type="button" value="editar" class="colormenu btn"></td>
+                        <td class="f2" ><input type="button" value="Eliminar" class="colormenu btn"></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                        <td class="f2"><input type="checkbox" name=""></td>
+                    </tr>
+              </table>
+            <br>
+            <br>
+            <br>
+        </div>
+        <br>
+            <br>
+        <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+                
+        <div class="modal fade" id="registroexitoso" tabindex="-1" role="dialog" aria-labelledby="examplemodalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+              
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="panel-body">
+                    <DIV class="centrardiv2">
+                  
+                      <h1 style="color: rgba(7, 180, 51, 0.918)">deseas eliminar ese usuario!</h1>
+                        </DIV>
+                        
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="colormenu btn" data-dismiss="modal" onclick="location='consultar_usuario.html'">Si</button>
+                  <button type="button" class="colormenu btn" data-dismiss="modal" onclick="location='consultar_usuario.html'">No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <!--modal configurtacion-->
+          <div class="modal fade" id="Configuración" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel" style="color: rgba(7, 180, 51, 0.918)">Configuración</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+  
+  
+                  </div>
+                  <div class="modal-body">
+                    <div class="panel-body">
+            <h3 style="color: rgba(83, 92, 85, 0.918)">Cambio de contraseña</h3> <br>
+            <div class="form-group">
+                <input class="form-control" placeholder="Ingresa tu contraseña actual*" name="password" type="password" autofocus="">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" placeholder="Ingresa tu nueva contraseña*" name="password" type="password" autofocus="">
+            </div><br>
+            <div class="form-group">
+                <input class="form-control" placeholder="Ingresa nuevamente tu nueva contraseña*" name="password" type="password" value="">
+                <span class="glyphicon glyphicon-search"></span>
+            </div><br>
+  
+                      <form role="form">
+                          <fieldset>
+                             
+                              <div class="checkbox">
+                             
+                              </div>
+                            </div>
+                  </div>
+                  <div class="modal-footer">
+                   
+                    <button type="button" class="colormenu btn" data-toggle="modal" data-target="#cambioExitoso">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="cambioExitoso" tabindex="-1" role="dialog" aria-labelledby="examplemodalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                  
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="panel-body">
+                        <DIV class="centrardiv2">
+                          <img src="img/registro.png.png" width="100" height="100">
+                      
+                          <h1 style="color: rgba(7, 180, 51, 0.918)">Cambio exitoso!</h1>
+                            </DIV>
+                            
+                              
+                            
+                            
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="colormenu btn" onclick="location='inicio.html'">Cerrar</button>
+                     
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            <!------------------------------------------------------------>
+          <div  class="pie3">
+            <table>
+               <br>
+               <br>
+               <br>
+               
+            </table>
+        </div>
+</body>
+</html>

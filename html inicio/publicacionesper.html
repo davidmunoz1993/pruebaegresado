@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+	<html >
+		<head>
+                <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+			<link rel="stylesheet" type="text/css" href="css/uno.css">
+			<link rel="icon" href="img/logo.jpeg">
+            <title> consulta de ofertas </title>
+            <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="js/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+			<script src="js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+			<!-- Button trigger modal -->
+		</head>
+
+<body  class="fondo" >
+	
+
+ 		<div class="uno">	
+			<th >	
+				<div class="dropdown">
+
+					<nav class="navbar navbar-expand-lg navbar-light colormenu" >
+            <a class="navbar-brand" href="administrador1.html" style="color:white">Administrador</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" style="color:white" data-toggle="modal" data-target="#Consultas">Consultas<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Administrar usuarios
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="consultar_usuario.html">Consultar usuarios</a>
+                 
+                    <a class="dropdown-item" href="consultar_empresa.html">Consultar empresa</a>
+                  </div>
+                </li>
+               
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" style="color:white" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Administrar grupos
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="crear_grupos.html">Crear grupo</a>
+                      <a class="dropdown-item" href="consultar_Grupos.html">Consultar grupo</a>
+                    </div>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" style="color:white; background-color: #149EC6 " id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Publicaciones en espera
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#">Publicacion 1</a>
+                      <a class="dropdown-item" href="#">Publicacion 2</a>
+                      <a class="dropdown-item" href="#">Publicacion 3</a>
+                      <a class="dropdown-item" href="#">Publicacion 4</a>
+
+
+                    </div>
+                  </li>
+                    <li class="nav-item active">
+                        <button type="button" id="continuar"class="grande btn" data-toggle="modal" data-target="#exampleModal" style="background-color: #0D5E76; color: white; margin-left: 470px ">Cuenta</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h2 class="modal-title" id="exampleModalLabel" style="color: #0D5E76 "></h2>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="panel-body">
+                                        <form role="form">
+                                            <fieldset>
+                                                <center><img src="img/cerrar.png" width="100" height="100" >
+                                                <br>
+                                                <br>
+                                                <h2><b style="color:#0D5E76 ">Administrador</b></h2><br><button type="button"class="letra1 btn" style="background-color:#149EC6"  data-toggle="modal" data-target="#Configuración">Configuración</button>
+                                                <br>
+                                                <br>
+                                                <button type="button" class="letra1 btn" style="background-color:#149EC6"  onclick="location.href='inicio.html'">Cerrar sesión</button></span></h2>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                    </li>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+          		
+  						
+    						
+
+    					
+
+ 						 </div>
+				</div>
+			</th>
+		</div>
+	
+		
+		<th>
+			<div class="colorfondo">
+        <br>
+        <br>
+        <br>
+      
+        <center><form class="form-horizontal">
+        <fieldset>
+        
+        <!-- Form Name -->
+        <legend>Publicación en espera</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Fecha inicio</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="date"  class="form-control input-md" disabled style="border-color: #149EC6 ">
+   
+          </div>
+        </div>
+        
+        <!-- Text input-->
+          <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Fecha final</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="date" class="form-control input-md" disabled style="border-color: #149EC6 ">
+    
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Asunto:</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text"  class="form-control input-md" disabled>
+           
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput">Perfil requerido:</label>  
+          <div class="col-md-4">
+          <input id="textinput" name="textinput" type="text"  class="form-control input-md" disabled>
+    
+          </div>
+        </div>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="textinput"></label>  
+          <div class="col-md-4">
+         
+        <th><label>Descripción:</label></th>
+              <th><input  type="text" style= "width:600px;height:200px; margin-left: -150px" placeholder="" disabled ></th>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+
+        <button type="button" class="letra1 btn" style="background-color:#149EC6; color: white" data-toggle="modal" data-target="#exampleModal">
+                Publicar</button>
+                <button type="button" class="letra1 btn" style="background-color:#149EC6; color: white" data-toggle="modal" data-target="#exampleModal1">
+                        Denegar</button>
+        
+            
+      </div>
+      <br>
+      <br>
+		<div >
+
+
+			<table class="pie3">
+				
+				<td> 
+					   <br>
+					   <br>
+					   <br>
+				</td>
+			</table>
+
+	</div>
+			
+
+
+</body>
+</html>
